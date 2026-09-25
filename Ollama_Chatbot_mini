@@ -1,0 +1,7 @@
+import ollama
+while True:
+    msg=input("You(User):")
+    resp=ollama.chat(model="phi3:mini",
+                         messages=[{"role":"user","content":msg}])
+    print("AI Bot(Ur Helper):",resp["message"]["content"])
+
